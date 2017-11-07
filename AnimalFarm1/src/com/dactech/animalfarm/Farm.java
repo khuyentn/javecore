@@ -19,40 +19,36 @@ public class Farm {
         return farm;
     }
 
-    public ArrayList<Duck> getDucks() {
-        return (ArrayList<Duck>) ducks;
+    public List<Duck> getDucks() {
+        return ducks;
     }
 
-    public void setDucks(Duck duck) {
-        this.ducks.add(duck);
+    public void setDucks(List<Duck> ducks) {
+        this.ducks = ducks;
     }
 
     public List<Chicken> getChickens() {
         return chickens;
     }
 
-    public void setChickens(Chicken chicken) {
-        this.chickens.add(chicken);
+    public void setChickens(List<Chicken> chickens) {
+        this.chickens = chickens;
     }
 
     public List<Pig> getPigs() {
         return pigs;
     }
 
-    public void setPigs(Pig pig) {
+    public void setPigs(List<Pig> pigs) {
+        this.pigs = pigs;
+    }
+
+    public void addDuck(Duck duck) { this.ducks.add(duck);}
+    public void addPig(Pig pig) {
         this.pigs.add(pig);
     }
-
-    public void addDuck(List<Duck> ducks){
-        this.ducks.addAll(ducks);
-    }
-
-    public void addChicken(List<Chicken> chickens){
-        this.chickens.addAll(chickens);
-    }
-
-    public void addPig(List<Pig> pigs){
-        this.pigs.addAll(pigs);
+    public void addChicken(Chicken chicken) {
+        this.chickens.add(chicken);
     }
 
     public void addAnimal(List<Animal> animals){
@@ -60,13 +56,13 @@ public class Farm {
             Object tmp = animals.get(index).getClass().getSimpleName();
             if (tmp.equals("Duck")){
                 Duck duck = (Duck) animals.get(index);
-                this.setDucks(duck);
+                this.addDuck(duck);
             } else if (tmp.equals("Pig")){
                 Pig pig = (Pig) animals.get(index);
-                this.setPigs(pig);
+                this.addPig(pig);
             } else if(tmp.equals("Chicken")) {
                 Chicken chicken = (Chicken) animals.get(index);
-                this.setChickens(chicken);
+                this.addChicken(chicken);
             }
         }
     }

@@ -13,23 +13,17 @@ public class App{
 
         Farm farm = new Farm();
         List<Animal> animals = new ArrayList<>();
-//        List<Duck> ducks = new ArrayList<>();
-//        farm.setDucks(animals);
-//       animals = farm.getDucks();
-//        for (int index = 0; index < 10; index++){
-//            ducks.add(new Duck("com.dactech.animalfarm.Duck " + index));
-//        }
+        List<Duck> ducks = new ArrayList<>();
+        for (int index = 0; index < 10; index++){
+            ducks.add(new Duck("com.dactech.animalfarm.Duck " + index));
+        }
 
-        List<Animal> ducks = DuckFactory.instance().create(4);
-        farm.addAnimal(ducks);
-        List<Animal> pigs = PigFactory.instance().create(5);
-        farm.addAnimal(pigs);
-        List<Animal> chickens = ChickenFactory.instance().create(5);
-        farm.addAnimal(chickens);
+        List<Animal> ducksTest = DuckFactory.instance().create(4);
+//        farm.addAnimal(ducksTest);
 
-//        for (int i = 0; i < duckTest.size(); i++){
-//            duckTest.get(i).displayName();
-//        }
+        for (int i = 0; i < ducks.size(); i++){
+            ducks.get(i).displayName();
+        }
 
 
 
