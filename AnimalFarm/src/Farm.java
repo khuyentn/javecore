@@ -41,10 +41,10 @@ public class Farm {
     }
 
     public void addDuck(List<Duck> ducks){
-        //
+        ducks.add(new Duck());
     }
 
-    public void removeDuck(List<Duck> ducks){
-        //
+    public void removeDuck(List<Duck> ducks, Duck duck1){
+        ducks.remove(duck1);
     }
 }
