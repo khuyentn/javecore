@@ -1,6 +1,5 @@
 package com.dactech.animalfarm;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -68,7 +67,13 @@ public class Farm {
     }
 
 
-    public void removeDuck(List<Duck> ducks){
-        this.ducks.removeAll(ducks);
+    public void removeDuck(Duck duck){
+        this.ducks.remove(duck);
+    }
+    public void removePig(Pig pig){
+        this.ducks.remove(pig);
+    }
+    public void removeChicken(Chicken chicken){
+        this.ducks.remove(chicken);
     }
 }
